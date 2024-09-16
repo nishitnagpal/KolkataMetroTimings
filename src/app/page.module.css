@@ -136,6 +136,7 @@
   max-height: 100px;
   overflow-y: scroll;
   z-index: 1000;
+  font-size: medium!important;
 }
 .dropdownItem {
   padding: 0.5rem;
@@ -209,14 +210,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1rem;
   margin: 1rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
   flex: 1 1 calc(33.333% - 1rem); 
-  height: 120px;
+  height: 110px!important;
+  width: 250px;
 }
 
 .card h2 {
@@ -273,7 +275,7 @@
   gap: 1rem;
   width: 100vw;
   max-width: var(--max-width); 
-  height: 300px; 
+  height: 300px!important; 
   overflow-y: auto; 
 }
 
@@ -286,7 +288,7 @@
   width: 140px;
   border-radius: 25px;
   text-align: center;
-  /*font-size: medium;*/
+  font-size: medium!important;
 } 
 
 .buttonsContainer button:hover, .buttonsReset button:hover {
@@ -341,6 +343,8 @@
 
 .imagecontainer{
   transition: transform 0.3s ease-in-out;
+  width: 30px!important;
+  height: auto;
 }
 
 .imagecontainer:hover{

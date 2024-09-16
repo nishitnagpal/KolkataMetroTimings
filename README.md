@@ -2,7 +2,7 @@
 
 [Website](https://kolkata-metro-timings.vercel.app)
 
-##Metro Railway, Kolkata: A Confluence of Culture, Technology, and Eco-Friendliness 🌍🚉
+## Metro Railway, Kolkata: A Confluence of Culture, Technology, and Eco-Friendliness 🌍🚉
 
 Welcome to the Metro Railway, Kolkata project! This repository is dedicated to building a responsive and efficient platform that provides real-time train schedules for Kolkata’s metro network.
 

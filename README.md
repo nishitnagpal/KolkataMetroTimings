@@ -1,3 +1,5 @@
+[Website](https://kolkata-metro-timings.vercel.app)
+
 Metro Railway, Kolkata: A Confluence of Culture, Technology, and Eco-Friendliness 🌍🚉
 
 Welcome to the Metro Railway, Kolkata project! This repository is dedicated to building a responsive and efficient platform that provides real-time train schedules for Kolkata’s metro network.
@@ -36,3 +38,5 @@ To maintain accuracy, the official Metro website is scraped regularly to ensure 
 When you first load the website, an introductory message will walk you through the process of selecting your metro route and station. Once you’re ready, simply click "OK" and get direct access to real-time metro details.
 
 🌟 This project aims to enhance your daily commute and help you stay on top of your metro schedules with ease and precision. Feel free to explore, contribute, or share your feedback!
+
+The website is deployed through Vercel with Github @ [https://kolkata-metro-timings.vercel.app/](https://kolkata-metro-timings.vercel.app/)

@@ -1,653 +1,70 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  padding-bottom: 3rem; 
-}
 
-.header{
-  /*display: flex;*/
-  display: inherit;
-  justify-content:center ;
-  position: relative;                            
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  margin-bottom: 2rem;
-}
-
-.headercomponents, .headercomponentDate{
-  display: inline-flex;
-  flex-direction: row;
-  margin: 1rem 3rem 0 3rem;
-  padding: 1rem;
-  color: #42b883;
-}
-
-.headercomponentTime {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 1rem 3rem 0 3rem;
-  padding: 1rem;
-  color: #42b883;
-  width: 140px;
-  justify-content: center;
-}
-/*
-.headercomponents, .headercomponentTime {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem 3rem 0 3rem;
-  padding: 1rem;
-  color: #42b883;
-  width: 140px;
-  justify-content: center;
-}
-*/
-.introOverlay {
-  position: fixed;
-  max-width: 40%;
-  width: 100%;
-  top: 25%;
-  border: 5px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it's on top */
-  font-size: large;
-}
-
-.introContent {
-  color: white;
-  text-align: center;
-  padding: 20px;
-  max-width: 100%;
-}
-
-.okayButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #42b883;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: large;
-}
-
-.okayButton:hover {
-  background-color: white;
-}
-
-.description {
-  /*display: flex;*/
-  display: inherit;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-  margin-bottom: 2rem;
-}
-
-.searchInput{
-  /*display: flex;*/
-  display: inherit;
-  position: relative;
-  width: 200px;
-  height: 30px;
-  background-color: white; 
-  color:black;
-  justify-content: center;
-  align-items: center;
-}
-
-.searchsubmitbutton{
-  /* display: flex;*/
-  display: inline-flex;
-  flex-direction: row;  /*  */
-  padding: 1rem;
-  color: black;
-  background-color: #42b883;
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  justify-content: center;
-  font-size: medium;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 30px;
-}
-
-.searchsubmitbutton:hover{
-  cursor: pointer;
-}
-
-.dropdown {
-  position: fixed;
-  color: black;
-  border: 1px solid black;
-  background-color: white;
-  text-align: left;
-  max-height: 100px;
-  overflow-y: scroll;
-  z-index: 1000;
-  font-size: medium!important;
-}
-.dropdownItem {
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.dropdownItem:hover {
-  background-color: #42b883;
-}
-
-.description p{
-  font-size: large;
-  max-width: 30%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nextMetro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 50%; 
-  font-size: 1.5rem; 
-  width: 100vw;
-  max-width: var(--max-width);
-  padding-top: 2rem;
-}
-
-.nextMetro .nextMetroPContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; 
-}
-
-.nextMetroPContainer p{
-  padding: 1.2rem;
-}
-
-.nextMetro p {
-  margin: 2rem 8rem 0 8rem;         
-  text-align: center;     
-}
-
-.nextMetro span {
-  color: #42b883; 
-  font-size: 2rem; 
-}
-
-.grid {
-  display: grid;
-  flex-wrap: wrap;   /*   */        
-  grid-template-columns: repeat(3, minmax(30%, auto));
-  max-width: 100%;
-  width: var(--max-width);
-  margin-top: 1rem;
-  min-height: 300px; 
-  margin-bottom: 2rem; 
-  overflow-y: auto;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 1rem;
-  margin: 1rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-  flex: 1 1 calc(33.333% - 1rem); 
-  height: 110px!important;
-  width: 250px;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin: 0.7rem;
-}
-
-.purpleline{
-  background-color: blueviolet;
-}
-.purpleButton{
-  background-color: blueviolet!important;
-  color: white!important;
-} 
-.blueline{
-  background-color: rgba(0, 0,255, 0.6);
-}
-.blueButton{
-  background-color: rgba(0, 0,255, 0.6)!important;
-  color: white!important;
-}  
-.yellowline{
-  background-color: rgba(255,255,0, 0.6);
-}
-.yellowButton{
-  background-color: rgba(255,255,0, 0.6)!important;
-  color: white!important;
-} 
-.orangeline{
-  background-color: orangered;
-}
-.orangeButton{
-  background-color: orangered!important;
-  color: white!important;
-} 
-.greenline{
-  background-color: green;
-}
-.greenButton{
-  background-color: green!important;
-  color: white!important;
-} 
-.pinkline{
-  background-color: rgba(228, 15, 104, 0.8);
-}
-.pinkButton{
-  background-color: rgba(228, 15, 104, 0.8)!important;
-  color: white!important;
-} 
-
-.buttonsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100vw;
-  max-width: var(--max-width); 
-  height: 300px!important; 
-  overflow-y: auto; 
-}
-
-.buttonsContainer button {
-  color: black;
-  background-color: white;
-  padding: 1rem;
-  height: 70px;
-  box-sizing: border-box;
-  width: 140px;
-  border-radius: 25px;
-  text-align: center;
-  font-size: medium!important;
-} 
-
-.buttonsContainer button:hover, .buttonsReset button:hover {
-  cursor: pointer;
-}
-
-.buttonsReset{
-  display: flex;
-  /*flex-wrap: wrap;*/
-  position: relative;  /*  */
-  gap: 1rem;
-  /* width: 100vw;
-   height: 200px;*/
-  max-width: var(--max-width); 
-}
-
-.buttonsReset button{
-  color: black;
-  background-color: white;
-  padding: 1rem;
-  height: 50px;
-  box-sizing: border-box;
-  width: 120px;
-  border-radius: 25px;
-  text-align: center;
-  font-size: medium;
-}
-
-.activeButton{
-  cursor: pointer;
-  background-color: #42b883!important;
-}
-
-.footer{
-  /*display: flex;*/
-  display: inherit;
-  justify-content:center ;
-  position: fixed;
-  bottom: 0;         
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-}
-
-.footercomponents {
-  /*display: flex;*/
-  display: inline-flex; 
-  flex-direction: row;
-  margin: 0 3.5rem 0 3.5rem;  /* margin: 0 3.5rem;*/
-  padding: 1rem;
-}
-
-.imagecontainer{
-  transition: transform 0.3s ease-in-out;
-  width: 30px!important;
-  height: auto;
-}
-
-.imagecontainer:hover{
-  transform: scale(1.2);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    cursor: pointer;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .grid {
-    display: grid;
-    flex-wrap: wrap;          
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    grid-template-rows: 130px 130px;
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 5%; 
-    overflow-y: auto;
-    font-size: small;
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 3rem; 
   }
 
   .header{
-    padding: 0;   
-    margin: 0;
-  }
-  
-  .headercomponents{
-    display: none;
-  }
-  
-  .headercomponentDate{
-    display: inline-flex;
-    position: fixed;
-    font-family: 'Consolas', monospace;
-    margin: 1.5rem 0 0 0;
-    padding: 1rem;
-    left: 5%;
-    background-color: #42b883;
-    align-items: center;
-    color: white;
-    border-radius: 25px;
-    font-size: large;   
-  }
-
-  .headercomponentTime {
-    display: inline-flex;
-    position: fixed;
-    font-family: 'Consolas', monospace;
-    margin: 1.5rem 0 0 0;  
-    padding: 1rem;
-    right: 5%;
-    background-color: #42b883;
-    color: white;
-    border-radius: 25px;
-    align-items: center;
-    font-size: large;
-    width: 40%;
-  }
-  
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 80%;
-    /*top: 20%;*/
-    max-height: 65%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: large;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .description {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    /*display: flex;*/
+    display: inherit;
+    justify-content:center ;
+    position: relative;                            
     max-width: var(--max-width);
     width: 100%;
     z-index: 2;
-    font-family: var(--font-mono);
-    margin: 25% 0 0 0;
+    margin-bottom: 2rem;
   }
 
-  .description p{
-    display: none;
-  }
-
-  .buttonsReset{
-    display: flex;
-    position: relative;  /*  */
-    gap: 0.3em;
-    margin: 5% 0 0 0;
-    /* width: 100vw;
-     height: 200px;*/
-  }
-
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw; 
-    height: 250px; 
-    overflow-y: auto; 
-    justify-content: center;
-  }
-  
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 70px;
-    box-sizing: border-box;
-    width: 140px;
-    border-radius: 25px;
-    text-align: center;
-    /*font-size: medium;*/
-  }   
-
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: auto; 
-    font-size: 1.5rem; 
-    width: 100vw;
-    padding: 0;
-  }
-  
-  .nextMetroPContainer {
-    display: flex;
-    flex-direction: column!important;
-    justify-content: flex-start; 
-    width: 100vw;
-    align-items: center;
-  }
-  
-  .nextMetroPContainer p{
-    padding: 1rem;
-  }
-  
-  .nextMetro p {
-    margin: 1rem 1rem 0 1rem;         
-    text-align: center;     
-  }
-  
-  .nextMetro span {
-    color: #42b883; 
-    font-size: 2rem; 
-  }
-
-  .footer{
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;      
-    left: 0;   
-    width: 100%;
-    z-index: 2;
-    padding-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0;  
-    padding: 20px;
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 1.2rem;
-    margin: 0 1rem 0 1rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 100px;
-  }
-  
-  .card h2 {
-    font-size: small;
-    font-weight: 600;
-  }
-
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  
-}
-
-@media (max-width: 350px) {
-  .headercomponents{
-    display: none;
-  }
-  
-  .headercomponentDate{
+  .headercomponents, .headercomponentDate{
     display: inline-flex;
-    position: absolute;
-    font-family: 'Consolas', monospace;
-    margin: 1.5rem 0 0 0;
-    padding: 0.7rem;
-    left: 5%;
-    background-color: #42b883;
-    align-items: center;
-    color: white;
-    border-radius: 25px;
-    font-size: small;   
+    flex-direction: row;
+    margin: 1rem 3rem 0 3rem;
+    padding: 1rem;
+    color: #42b883;
   }
 
   .headercomponentTime {
     display: inline-flex;
-    position: absolute;
-    font-family: 'Consolas', monospace;
-    margin: 1.5rem 0 0 0;  
-    padding: 0.7rem;
-    right: 5%;
-    background-color: #42b883;
-    color: white;
-    border-radius: 25px;
-    align-items: center;
-    font-size: small;
-    width: 40%;
+    flex-direction: row;
+    margin: 1rem 3rem 0 3rem;
+    padding: 1rem;
+    color: #42b883;
+    width: 140px;
+    justify-content: center;
   }
+  /*
+  .headercomponents, .headercomponentTime {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 3rem 0 3rem;
+    padding: 1rem;
+    color: #42b883;
+    width: 140px;
+    justify-content: center;
+  }
+  */
+  .introOverlay {
+    position: fixed;
+    max-width: 40%;
+    width: 100%;
+    top: 25%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+    font-size: large;
+  }
+
   .introContent {
     color: white;
     text-align: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 10px;
+    padding: 20px;
     max-width: 100%;
-    font-size: medium;
   }
 
   .okayButton {
@@ -658,55 +75,158 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: small;
+    font-size: large;
   }
-  .main{
-    flex: 1;
-    margin-bottom: 0;
-    padding-bottom: 0;
+
+  .okayButton:hover {
+    background-color: white;
   }
-  .footer{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    /*
-    bottom: 0;      
-    left: 0;   
-    */
+
+  .description {
+    /*display: flex;*/
+    display: inherit;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 0.85rem;
+    max-width: var(--max-width);
     width: 100%;
     z-index: 2;
-    padding-bottom: 0;
-    box-sizing: border-box;
+    font-family: var(--font-mono);
+    margin-bottom: 2rem;
   }
-  
-  .footercomponents {
+
+  .searchInput{
     /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0;  
-    padding: 10px;
+    display: inherit;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    background-color: white; 
+    color:black;
+    justify-content: center;
+    align-items: center;
   }
-  
+
+  .searchsubmitbutton{
+    /* display: flex;*/
+    display: inline-flex;
+    flex-direction: row;  /*  */
+    padding: 1rem;
+    color: black;
+    background-color: #42b883;
+    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+    justify-content: center;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+  }
+
+  .searchsubmitbutton:hover{
+    cursor: pointer;
+  }
+
+  .dropdown {
+    position: fixed;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    text-align: left;
+    max-height: 100px;
+    overflow-y: scroll;
+    z-index: 1000;
+    font-size: medium!important;
+  }
+  .dropdownItem {
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .dropdownItem:hover {
+    background-color: #42b883;
+  }
+
+  .description p{
+    font-size: large;
+    max-width: 30%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .description a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nextMetro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%; 
+    font-size: 1.5rem; 
+    width: 100vw;
+    max-width: var(--max-width);
+    padding-top: 2rem;
+  }
+
+  .nextMetro .nextMetroPContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+  }
+
+  .nextMetroPContainer p{
+    padding: 1.2rem;
+  }
+
+  .nextMetro p {
+    margin: 2rem 8rem 0 8rem;         
+    text-align: center;     
+  }
+
+  .nextMetro span {
+    color: #42b883; 
+    font-size: 2rem; 
+  }
+
+  .grid {
+    display: grid;
+    flex-wrap: wrap;   /*   */        
+    grid-template-columns: repeat(3, minmax(30%, auto));
+    max-width: 100%;
+    width: var(--max-width);
+    margin-top: 1rem;
+    min-height: 300px; 
+    margin-bottom: 2rem; 
+    overflow-y: auto;
+  }
+
   .card {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem 1.2rem;
+    padding: 1rem 1rem;
     margin: 1rem;
     border-radius: var(--border-radius);
     background: rgba(var(--card-rgb), 0);
     border: 1px solid rgba(var(--card-border-rgb), 0);
     transition: background 200ms, border 200ms;
     flex: 1 1 calc(33.333% - 1rem); 
-    height: 80px;
+    height: 110px!important;
+    width: 250px;
   }
-  
+
   .card h2 {
     font-weight: 600;
     margin: 0.7rem;
   }
-  
+
   .purpleline{
     background-color: blueviolet;
   }
@@ -748,490 +268,61 @@
   .pinkButton{
     background-color: rgba(228, 15, 104, 0.8)!important;
     color: white!important;
+  } 
+
+  .buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100vw;
+    max-width: var(--max-width); 
+    height: 300px!important; 
+    overflow-y: auto; 
   }
-  
-  .grid {
-    display: grid;
-    flex-wrap: wrap;          
-    grid-template-columns: repeat(2, minmax(35%, auto));
-    grid-template-rows: 100px 100px;
-    width: 100%;
-    column-gap: 0;
-    margin-top: 1rem;
-    margin-bottom: 5%; 
-    overflow-y: auto;
-    font-size: small;
+
+  .buttonsContainer button {
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    height: 70px;
+    box-sizing: border-box;
+    width: 140px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: medium!important;
+  } 
+
+  .buttonsContainer button:hover, .buttonsReset button:hover {
+    cursor: pointer;
   }
+
   .buttonsReset{
     display: flex;
+    /*flex-wrap: wrap;*/
     position: relative;  /*  */
-    gap: 0.3em;
-    margin: 10% 0 0 0;
+    gap: 1rem;
     /* width: 100vw;
-     height: 200px;*/
+    height: 200px;*/
+    max-width: var(--max-width); 
   }
+
+  .buttonsReset button{
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    height: 50px;
+    box-sizing: border-box;
+    width: 120px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: medium;
+  }
+
   .activeButton{
-    font-size: small!important;
-    width: 90px!important;
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 900px) {
-  .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: x-large;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    width: 200px;
-    justify-content: center;
-    font-size: x-large;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 80%;
-    /*top: 20%;*/
-    max-height: 65%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: x-large;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 20px;
-    max-width: 100%;
-  }
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    font-size: x-large;
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-    font-family: var(--font-mono);
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 2rem;
-    top: 33%;
-  }
-
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 65px;
-    box-sizing: border-box;
-    width: 120px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 65%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1.2rem;
-    margin: 1rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 150px;
-  }
-
-  .card h2 {
-    font-weight: 600;
-    margin: 0.7rem;
-  }
-
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 90vw;
-    height: 400px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 0 1rem 0 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 150px;
-    box-sizing: border-box;
-    width: 180px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: x-large;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: xx-large; 
-    width: 100vw;
-    padding: 0;
-  }
-  
-  .nextMetroPContainer {
-    display: flex;
-    justify-content: center; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 1.2rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 2rem 0 2rem;         
-    text-align: center;     
-  }
-  
-  .footer{
-    /*display: flex;*/
-    display: inherit;
-    justify-content:center ;
-    position: fixed;
-    bottom: 0;         
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-  }
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0 2rem 0 2rem;  /* margin: 0 3.5rem;*/
-    padding: 1rem;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1120px){
-  .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: xx-large;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    width: 300px;
-    justify-content: center;
-    font-size: xx-large;
-    font-family: 'Consolas', monospace;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 80%;
-    /*top: 20%;*/
-    max-height: 65%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: x-large;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 10px;
-    max-width: 100%;
-  }
-  .okayButton {
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #42b883;
-    color: black;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: x-large;
+    background-color: #42b883!important;
   }
 
-  .searchInput{
-    /*display: flex;*/
-    display: inherit;
-    position: relative;
-    width: 200px;
-    height: 30px;
-    background-color: white; 
-    color:black;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-  }
-  .dropdown {
-    position: fixed;
-    color: black;
-    border: 1px solid black;
-    background-color: white;
-    text-align: left;
-    max-height: 150px;
-    overflow-y: scroll;
-    z-index: 1000;
-  }
-
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    font-size: x-large;
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-    font-family: var(--font-mono);
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 2rem;
-    top: 30%;
-  }
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 65px;
-    box-sizing: border-box;
-    width: 120px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 65%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 1.2rem;
-    margin: 1rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 130px;
-  }
-
-  .card h2 {
-    font-weight: 600;
-    margin: 0.7rem;
-  }
-
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 90vw;
-    height: 300px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 150px;
-    box-sizing: border-box;
-    width: 180px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: x-large;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: xx-large; 
-    width: 100vw;
-    padding: 0;
-  }
-  
-  .nextMetroPContainer {
-    display: flex;
-    justify-content: center; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 1.2rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 2rem 0 2rem;         
-    text-align: center;     
-  }
-  
   .footer{
     /*display: flex;*/
     display: inherit;
@@ -1242,264 +333,7 @@
     width: 100%;
     z-index: 2;
   }
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0 2rem 0 2rem;  /* margin: 0 3.5rem;*/
-    padding: 1rem;
-  }
-  .imagecontainer{
-    width: 50px;
-    height: auto;
-  }
-}
 
-@media (min-width: 1121px) and (max-width: 1440px){
-  .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: x-large;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    width: 200px;
-    justify-content: center;
-    font-size: x-large;
-    font-family: 'Consolas', monospace;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 65%;
-    /*top: 20%;*/
-    max-height: 60%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: x-large;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 10px;
-    max-width: 100%;
-  }
-  .okayButton {
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #42b883;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: x-large;
-  }
-
-  .searchInput{
-    /*display: flex;*/
-    display: inherit;
-    position: relative;
-    width: 200px;
-    height: 30px;
-    background-color: white; 
-    color:black;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-  }
-  .dropdown {
-    position: fixed;
-    color: black;
-    border: 1px solid black;
-    background-color: white;
-    text-align: left;
-    max-height: 150px;
-    overflow-y: scroll;
-    z-index: 1000;
-  }
-
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    font-size: x-large;
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-    font-family: var(--font-mono);
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 2rem;
-    top: 30%;
-  }
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 55px;
-    box-sizing: border-box;
-    width: 120px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 60%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1.2rem;
-    margin: 1rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 150px;
-  }
-
-  .card h2 {
-    font-weight: 600;
-    margin: 0.7rem;
-  }
-
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 90vw;
-    height: 350px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 2rem 1rem 0 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 120px;
-    box-sizing: border-box;
-    width: 150px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: large;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: xx-large; 
-    width: 100vw;
-    padding: 0;
-  }
-  
-  .nextMetroPContainer {
-    display: flex;
-    justify-content: center; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 1.2rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 2rem 0 2rem;         
-    text-align: center;     
-  }
-  
-  .footer{
-    /*display: flex;*/
-    display: inherit;
-    justify-content:center ;
-    position: fixed;
-    bottom: 0;         
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-  }
   .footercomponents {
     /*display: flex;*/
     display: inline-flex; 
@@ -1507,1110 +341,2277 @@
     margin: 0 3.5rem 0 3.5rem;  /* margin: 0 3.5rem;*/
     padding: 1rem;
   }
+
   .imagecontainer{
-    width: 50px;
+    transition: transform 0.3s ease-in-out;
+    width: 30px!important;
     height: auto;
   }
-}
 
-@media (min-width: 1920px) and (max-width: 2048px) {
- .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: xx-large;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 0;
-    color: #42b883;
-    width: 270px;
-    justify-content: center;
-    font-size: xx-large;
-    font-family: 'Consolas', monospace;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 65%;
-    /*top: 20%;*/
-    max-height: 60%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: xx-large;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 10px;
-    max-width: 100%;
-  }
-  .okayButton {
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #42b883;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: xx-large;
+  .imagecontainer:hover{
+    transform: scale(1.2);
   }
 
-  .searchInput{
-    /*display: flex;*/
-    display: inherit;
-    position: relative;
-    width: 300px;
-    height: 30px;
-    background-color: white; 
-    color:black;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-  }
-  .dropdown {
-    position: fixed;
-    color: black;
-    border: 1px solid black;
-    background-color: white;
-    text-align: left;
-    max-height: 150px;
-    overflow-y: scroll;
-    z-index: 1000;
-  }
-  .searchsubmitbutton{
-    /* display: flex;*/
-    display: inline-flex;
-    flex-direction: row;  /*  */
-    padding: 1rem;
-    color: black;
-    background-color: #42b883;
-    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-    justify-content: center;
-    font-size: x-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40px;
-  }
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    z-index: 2;
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .description p{
-    font-size: x-large;
-    text-align: left;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 2rem;
-    top: 30%;
-  }
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 75px;
-    box-sizing: border-box;
-    width: 180px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 40%;  
-    justify-content: center;
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1.2rem;
-    margin: 2rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 150px;
-    width: 400px;
+  /* Enable hover only on non-touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    .card:hover {
+      background: rgba(var(--card-rgb), 0.1);
+      border: 1px solid rgba(var(--card-border-rgb), 0.15);
+      cursor: pointer;
+    }
   }
 
-  .card h2 {
-    /*font-weight: 600;*/
-    font-size: xx-large;
-    margin: 0.7rem;
+  @media (prefers-reduced-motion) {
+    .card:hover span {
+      transform: none;
+    }
   }
 
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 90vw;
-    height: 400px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 2rem 1rem 0 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 150px;
-    box-sizing: border-box;
-    width: 200px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: x-large;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: xx-large; 
-    width: 100vw;
-    padding: 2rem 0 0 0;
-  }
-  
-  .nextMetroPContainer {
-    margin: 2rem 0 0 0;
-    display: flex;
-    justify-content: center; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 2.5rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 4rem 0 4rem;         
-    text-align: center;     
-  }
-  
-  .footer{
-    /*display: flex;*/
-    display: inherit;
-    justify-content:center ;
-    position: fixed;
-    bottom: 0;         
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-  }
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0 5rem 1rem 5rem;  /* margin: 0 3.5rem;*/
-    padding: 1rem;
-  }
-  .imagecontainer{
-    width: 50px;
-    height: auto;
-  } 
-}
+  /* Mobile */
+  @media (min-width: 401px) and (max-width: 700px) {
+    .grid {
+      display: grid;
+      flex-wrap: wrap;          
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      grid-template-rows: 130px 130px;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 5%; 
+      overflow-y: auto;
+      font-size: small;
+    }
 
-@media (min-width: 2049px) and (max-width: 2400px) {
+    .header{
+      padding: 0;   
+      margin: 0;
+    }
+    
+    .headercomponents{
+      display: none;
+    }
+    
+    .headercomponentDate{
+      display: inline-flex;
+      position: fixed;
+      font-family: 'Consolas', monospace;
+      margin: 1.5rem 0 0 0;
+      padding: 1rem;
+      left: 5%;
+      background-color: #42b883;
+      align-items: center;
+      color: white;
+      border-radius: 25px;
+      font-size: large;   
+    }
+
+    .headercomponentTime {
+      display: inline-flex;
+      position: fixed;
+      font-family: 'Consolas', monospace;
+      margin: 1.5rem 0 0 0;  
+      padding: 1rem;
+      right: 5%;
+      background-color: #42b883;
+      color: white;
+      border-radius: 25px;
+      align-items: center;
+      font-size: large;
+      width: 40%;
+    }
+    
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 80%;
+      /*top: 20%;*/
+      max-height: 65%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: large;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 20px;
+      max-width: 100%;
+    }
+
+    .description {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+      font-family: var(--font-mono);
+      margin: 25% 0 0 0;
+    }
+
+    .description p{
+      display: none;
+    }
+
+    .buttonsReset{
+      display: flex;
+      position: relative;  /*  */
+      gap: 0.3em;
+      margin: 5% 0 0 0;
+      /* width: 100vw;
+      height: 200px;*/
+    }
+
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw; 
+      height: 250px; 
+      overflow-y: auto; 
+      justify-content: center;
+    }
+    
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 70px;
+      box-sizing: border-box;
+      width: 140px;
+      border-radius: 25px;
+      text-align: center;
+      /*font-size: medium;*/
+    }   
+
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: auto; 
+      font-size: 1.5rem; 
+      width: 100vw;
+      padding: 0;
+    }
+    
+    .nextMetroPContainer {
+      display: flex;
+      flex-direction: column!important;
+      justify-content: flex-start; 
+      width: 100vw;
+      align-items: center;
+    }
+    
+    .nextMetroPContainer p{
+      padding: 1rem;
+    }
+    
+    .nextMetro p {
+      margin: 1rem 1rem 0 1rem;         
+      text-align: center;     
+    }
+    
+    .nextMetro span {
+      color: #42b883; 
+      font-size: 2rem; 
+    }
+
+    .footer{
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 0;      
+      left: 0;   
+      width: 100%;
+      z-index: 2;
+      padding-bottom: 10px;
+      box-sizing: border-box;
+    }
+    
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0;  
+      padding: 20px;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.2rem;
+      margin: 0 1rem 0 1rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 100px;
+    }
+    
+    .card h2 {
+      font-size: small;
+      font-weight: 600;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    
+  }
+
+  @media (max-width: 400px) {
+    .headercomponents{
+      display: none;
+    }
+    
+    .headercomponentDate{
+      display: inline-flex;
+      position: absolute;
+      font-family: 'Consolas', monospace;
+      margin: 1.5rem 0 0 0;
+      padding: 0.7rem;
+      left: 5%;
+      background-color: #42b883;
+      align-items: center;
+      color: white;
+      border-radius: 25px;
+      font-size: small;   
+    }
+
+    .headercomponentTime {
+      display: inline-flex;
+      position: absolute;
+      font-family: 'Consolas', monospace;
+      margin: 1.5rem 0 0 0;  
+      padding: 0.7rem;
+      right: 5%;
+      background-color: #42b883;
+      color: white;
+      border-radius: 25px;
+      align-items: center;
+      font-size: small;
+      width: 40%;
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 10px;
+      max-width: 100%;
+      font-size: medium;
+    }
+
+    .okayButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: small;
+    }
+    .main{
+      flex: 1;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .footer{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      /*
+      bottom: 0;      
+      left: 0;   
+      */
+      width: 100%;
+      z-index: 2;
+      padding-bottom: 0;
+      box-sizing: border-box;
+    }
+    
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0;  
+      padding: 10px;
+    }
+    
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 1rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 80px;
+    }
+    
+    .card h2 {
+      font-weight: 600;
+      margin: 0.7rem;
+    }
+    
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    }
+    
+    .grid {
+      display: grid;
+      flex-wrap: wrap;          
+      grid-template-columns: repeat(2, minmax(35%, auto));
+      grid-template-rows: 100px 100px;
+      width: 100%;
+      column-gap: 0;
+      margin-top: 1rem;
+      margin-bottom: 5%; 
+      overflow-y: auto;
+      font-size: small;
+    }
+    .buttonsReset{
+      display: flex;
+      position: relative;  /*  */
+      gap: 0.3em;
+      margin: 10% 0 0 0;
+      /* width: 100vw;
+      height: 200px;*/
+    }
+    .activeButton{
+      font-size: small!important;
+      width: 90px!important;
+    }
+  }
+
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) and (max-width: 900px) {
+    .headercomponents, .headercomponentDate{
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: x-large;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      width: 200px;
+      justify-content: center;
+      font-size: x-large;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 80%;
+      /*top: 20%;*/
+      max-height: 65%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: x-large;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 20px;
+      max-width: 100%;
+    }
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      font-size: x-large;
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+      font-family: var(--font-mono);
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 2rem;
+      top: 33%;
+    }
+
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 65px;
+      box-sizing: border-box;
+      width: 120px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 65%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 1rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 150px;
+    }
+
+    .card h2 {
+      font-weight: 600;
+      margin: 0.7rem;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 90vw;
+      height: 400px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 0 1rem 0 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 150px;
+      box-sizing: border-box;
+      width: 180px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: x-large;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: xx-large; 
+      width: 100vw;
+      padding: 0;
+    }
+    
+    .nextMetroPContainer {
+      display: flex;
+      justify-content: center; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 1.2rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 2rem 0 2rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 2rem 0 2rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1120px){
+    .headercomponents, .headercomponentDate{
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: xx-large;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      width: 300px;
+      justify-content: center;
+      font-size: xx-large;
+      font-family: 'Consolas', monospace;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 80%;
+      /*top: 20%;*/
+      max-height: 65%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: x-large;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1em;
+      padding: 10px;
+      max-width: 100%;
+    }
+    .okayButton {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: x-large;
+    }
+
+    .searchInput{
+      /*display: flex;*/
+      display: inherit;
+      position: relative;
+      width: 200px;
+      height: 30px;
+      background-color: white; 
+      color:black;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    .dropdown {
+      position: fixed;
+      color: black;
+      border: 1px solid black;
+      background-color: white;
+      text-align: left;
+      max-height: 150px;
+      overflow-y: scroll;
+      z-index: 1000;
+    }
+
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      font-size: x-large;
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+      font-family: var(--font-mono);
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 2rem;
+      top: 30%;
+    }
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 65px;
+      box-sizing: border-box;
+      width: 120px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 65%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.2rem;
+      margin: 1rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 130px;
+    }
+
+    .card h2 {
+      font-weight: 600;
+      margin: 0.7rem;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 90vw;
+      height: 300px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 150px;
+      box-sizing: border-box;
+      width: 180px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: x-large;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: xx-large; 
+      width: 100vw;
+      padding: 0;
+    }
+    
+    .nextMetroPContainer {
+      display: flex;
+      justify-content: center; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 1.2rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 2rem 0 2rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 2rem 0 2rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+    .imagecontainer{
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1121px) and (max-width: 1440px){
+    .headercomponents, .headercomponentDate{
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: x-large;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      width: 200px;
+      justify-content: center;
+      font-size: x-large;
+      font-family: 'Consolas', monospace;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 65%;
+      /*top: 20%;*/
+      max-height: 60%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: x-large;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1em;
+      padding: 10px;
+      max-width: 100%;
+    }
+    .okayButton {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: x-large;
+    }
+
+    .searchInput{
+      /*display: flex;*/
+      display: inherit;
+      position: relative;
+      width: 200px;
+      height: 30px;
+      background-color: white; 
+      color:black;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+    }
+    .dropdown {
+      position: fixed;
+      color: black;
+      border: 1px solid black;
+      background-color: white;
+      text-align: left;
+      max-height: 150px;
+      overflow-y: scroll;
+      z-index: 1000;
+    }
+
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      font-size: x-large;
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+      font-family: var(--font-mono);
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 2rem;
+      top: 30%;
+    }
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 55px;
+      box-sizing: border-box;
+      width: 120px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 60%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 1rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 150px;
+    }
+
+    .card h2 {
+      font-weight: 600;
+      margin: 0.7rem;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 90vw;
+      height: 350px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 2rem 1rem 0 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 120px;
+      box-sizing: border-box;
+      width: 150px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: large;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: xx-large; 
+      width: 100vw;
+      padding: 0;
+    }
+    
+    .nextMetroPContainer {
+      display: flex;
+      justify-content: center; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 1.2rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 2rem 0 2rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 3.5rem 0 3.5rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+    .imagecontainer{
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 1920px) and (max-width: 2048px) {
   .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: xx-large;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 0;
-    color: #42b883;
-    width: 270px;
-    justify-content: center;
-    font-size: xx-large;
-    font-family: 'Consolas', monospace;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 55%;
-    /*top: 20%;*/
-    max-height: 60%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: 2.5rem;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 10px;
-    max-width: 100%;
-  }
-  .okayButton {
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #42b883;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: xx-large;
-  }
-  .searchInput{
-    /*display: flex;*/
-    display: inherit;
-    position: relative;
-    width: 300px;
-    height: 30px;
-    background-color: white; 
-    color:black;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-  }
-  .dropdown {
-    position: fixed;
-    color: black;
-    border: 1px solid black;
-    background-color: white;
-    text-align: left;
-    max-height: 150px;
-    overflow-y: scroll;
-    z-index: 1000;
-  }
-  .searchsubmitbutton{
-    /* display: flex;*/
-    display: inline-flex;
-    flex-direction: row;  /*  */
-    padding: 1rem;
-    color: black;
-    background-color: #42b883;
-    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-    justify-content: center;
-    font-size: x-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40px;
-  }
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    z-index: 2;
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .description p{
-    font-size: xx-large;
-    text-align: left;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 2rem;
-    top: 33%;
-  }
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 75px;
-    box-sizing: border-box;
-    width: 180px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 40%;  
-    justify-content: center;
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1.2rem;
-    margin: 2rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 250px;
-    width: 550px;
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: xx-large;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 0;
+      color: #42b883;
+      width: 270px;
+      justify-content: center;
+      font-size: xx-large;
+      font-family: 'Consolas', monospace;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 65%;
+      /*top: 20%;*/
+      max-height: 60%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: xx-large;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1em;
+      padding: 10px;
+      max-width: 100%;
+    }
+    .okayButton {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: xx-large;
+    }
+
+    .searchInput{
+      /*display: flex;*/
+      display: inherit;
+      position: relative;
+      width: 300px;
+      height: 30px;
+      background-color: white; 
+      color:black;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    .dropdown {
+      position: fixed;
+      color: black;
+      border: 1px solid black;
+      background-color: white;
+      text-align: left;
+      max-height: 150px;
+      overflow-y: scroll;
+      z-index: 1000;
+    }
+    .searchsubmitbutton{
+      /* display: flex;*/
+      display: inline-flex;
+      flex-direction: row;  /*  */
+      padding: 1rem;
+      color: black;
+      background-color: #42b883;
+      border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+      justify-content: center;
+      font-size: x-large;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 40px;
+    }
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      z-index: 2;
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .description p{
+      font-size: x-large;
+      text-align: left;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 2rem;
+      top: 30%;
+    }
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 75px;
+      box-sizing: border-box;
+      width: 180px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: xx-large;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 40%;  
+      justify-content: center;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 2rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 150px;
+      width: 400px;
+    }
+
+    .card h2 {
+      /*font-weight: 600;*/
+      font-size: xx-large;
+      margin: 0.7rem;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 90vw;
+      height: 400px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 2rem 1rem 0 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 150px;
+      box-sizing: border-box;
+      width: 200px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: x-large;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: xx-large; 
+      width: 100vw;
+      padding: 2rem 0 0 0;
+    }
+    
+    .nextMetroPContainer {
+      margin: 2rem 0 0 0;
+      display: flex;
+      justify-content: center; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 2.5rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 4rem 0 4rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      max-width: var(--max-width);
+      width: 100%;
+      z-index: 2;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 5rem 1rem 5rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+    .imagecontainer{
+      width: 50px;
+      height: auto;
+    } 
   }
 
-  .card h2 {
-    /*font-weight: 600;*/
-    font-size: 3rem;
-    margin: 0.7rem;
+  @media (min-width: 2049px) and (max-width: 2400px) {
+    .headercomponents, .headercomponentDate{
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: xx-large;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 0;
+      color: #42b883;
+      width: 270px;
+      justify-content: center;
+      font-size: xx-large;
+      font-family: 'Consolas', monospace;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 55%;
+      /*top: 20%;*/
+      max-height: 60%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: 2.5rem;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1em;
+      padding: 10px;
+      max-width: 100%;
+    }
+    .okayButton {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: xx-large;
+    }
+    .searchInput{
+      /*display: flex;*/
+      display: inherit;
+      position: relative;
+      width: 300px;
+      height: 30px;
+      background-color: white; 
+      color:black;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    .dropdown {
+      position: fixed;
+      color: black;
+      border: 1px solid black;
+      background-color: white;
+      text-align: left;
+      max-height: 150px;
+      overflow-y: scroll;
+      z-index: 1000;
+    }
+    .searchsubmitbutton{
+      /* display: flex;*/
+      display: inline-flex;
+      flex-direction: row;  /*  */
+      padding: 1rem;
+      color: black;
+      background-color: #42b883;
+      border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+      justify-content: center;
+      font-size: x-large;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 40px;
+    }
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      z-index: 2;
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .description p{
+      font-size: xx-large;
+      text-align: left;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 2rem;
+      top: 33%;
+    }
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 75px;
+      box-sizing: border-box;
+      width: 180px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: xx-large;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 40%;  
+      justify-content: center;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 2rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 250px;
+      width: 550px;
+    }
+
+    .card h2 {
+      /*font-weight: 600;*/
+      font-size: 3rem;
+      margin: 0.7rem;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      width: 90vw;
+      height: 450px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 2rem 1rem 0 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 200px;
+      box-sizing: border-box;
+      width: 300px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: xx-large;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: 3rem; 
+      width: 100vw;
+      padding: 2rem 0 0 0;
+    }
+    
+    .nextMetroPContainer {
+      margin: 2rem 0 0 0;
+      display: flex;
+      justify-content: center;
+      font-size: 3rem; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 3.5rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 4rem 0 4rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      width: 100%;
+      z-index: 2;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 7rem 1rem 7rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+    .imagecontainer{
+      width: 60px;
+      height: auto;
+    }
   }
 
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    width: 90vw;
-    height: 450px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 2rem 1rem 0 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 200px;
-    box-sizing: border-box;
-    width: 300px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: xx-large;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: 3rem; 
-    width: 100vw;
-    padding: 2rem 0 0 0;
-  }
-  
-  .nextMetroPContainer {
-    margin: 2rem 0 0 0;
-    display: flex;
-    justify-content: center;
-    font-size: 3rem; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 3.5rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 4rem 0 4rem;         
-    text-align: center;     
-  }
-  
-  .footer{
-    /*display: flex;*/
-    display: inherit;
-    justify-content:center ;
-    position: fixed;
-    bottom: 0;         
-    width: 100%;
-    z-index: 2;
-  }
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0 7rem 1rem 7rem;  /* margin: 0 3.5rem;*/
-    padding: 1rem;
-  }
-  .imagecontainer{
-    width: 60px;
-    height: auto;
-  }
-}
+  @media (min-width: 2401px) and (max-width: 2600px) {
+    .headercomponents, .headercomponentDate{
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: xx-large;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 0 0 0;
+      padding: 0;
+      color: #42b883;
+      width: 270px;
+      justify-content: center;
+      font-size: xx-large;
+      font-family: 'Consolas', monospace;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 55%;
+      /*top: 20%;*/
+      max-height: 60%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: 3rem;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1em;
+      padding: 10px;
+      max-width: 100%;
+    }
+    .okayButton {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: xx-large;
+    }
+    .searchInput{
+      /*display: flex;*/
+      display: inherit;
+      position: relative;
+      width: 300px;
+      height: 30px;
+      background-color: white; 
+      color:black;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+    }
+    .dropdown {
+      position: fixed;
+      color: black;
+      border: 1px solid black;
+      background-color: white;
+      text-align: left;
+      max-height: 150px;
+      overflow-y: scroll;
+      z-index: 1000;
+    }
+    .searchsubmitbutton{
+      /* display: flex;*/
+      display: inline-flex;
+      flex-direction: row;  /*  */
+      padding: 1rem;
+      color: black;
+      background-color: #42b883;
+      border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+      justify-content: center;
+      font-size: x-large;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 40px;
+    }
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      z-index: 2;
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .description p{
+      font-size: xx-large;
+      text-align: left;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 2rem;
+      top: 33%;
+    }
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 75px;
+      box-sizing: border-box;
+      width: 180px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: xx-large;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 40%;  
+      justify-content: center;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 2rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 250px;
+      width: 550px;
+    }
 
-@media (min-width: 2401px) and (max-width: 2600px) {
-  .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: xx-large;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 0 0 0;
-    padding: 0;
-    color: #42b883;
-    width: 270px;
-    justify-content: center;
-    font-size: xx-large;
-    font-family: 'Consolas', monospace;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 55%;
-    /*top: 20%;*/
-    max-height: 60%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: 3rem;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 10px;
-    max-width: 100%;
-  }
-  .okayButton {
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #42b883;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: xx-large;
-  }
-  .searchInput{
-    /*display: flex;*/
-    display: inherit;
-    position: relative;
-    width: 300px;
-    height: 30px;
-    background-color: white; 
-    color:black;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-  }
-  .dropdown {
-    position: fixed;
-    color: black;
-    border: 1px solid black;
-    background-color: white;
-    text-align: left;
-    max-height: 150px;
-    overflow-y: scroll;
-    z-index: 1000;
-  }
-  .searchsubmitbutton{
-    /* display: flex;*/
-    display: inline-flex;
-    flex-direction: row;  /*  */
-    padding: 1rem;
-    color: black;
-    background-color: #42b883;
-    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-    justify-content: center;
-    font-size: x-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40px;
-  }
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    z-index: 2;
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .description p{
-    font-size: xx-large;
-    text-align: left;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 2rem;
-    top: 33%;
-  }
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 75px;
-    box-sizing: border-box;
-    width: 180px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 40%;  
-    justify-content: center;
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1.2rem;
-    margin: 2rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 250px;
-    width: 550px;
-  }
+    .card h2 {
+      /*font-weight: 600;*/
+      font-size: 3rem;
+      margin: 0.7rem;
+    }
 
-  .card h2 {
-    /*font-weight: 600;*/
-    font-size: 3rem;
-    margin: 0.7rem;
-  }
-
-  .purpleline{
-    background-color: blueviolet;
-  }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    width: 90vw;
-    height: 450px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 2rem 1rem 0 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 200px;
-    box-sizing: border-box;
-    width: 300px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: xx-large;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: 3rem; 
-    width: 100vw;
-    padding: 2rem 0 0 0;
-  }
-  
-  .nextMetroPContainer {
-    margin: 2rem 0 0 0;
-    display: flex;
-    justify-content: center;
-    font-size: 3rem; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 3.5rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 4rem 0 4rem;         
-    text-align: center;     
-  }
-  
-  .footer{
-    /*display: flex;*/
-    display: inherit;
-    justify-content:center ;
-    position: fixed;
-    bottom: 0;         
-    width: 100%;
-    z-index: 2;
-  }
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0 7rem 1rem 7rem;  /* margin: 0 3.5rem;*/
-    padding: 1rem;
-  }
-  .imagecontainer{
-    width: 60px;
-    height: auto;
-  }
-}
-
-@media (min-width: 2601px) {
-  .headercomponents, .headercomponentDate{
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 3em 0 0;
-    padding: 1em;
-    color: #42b883;
-    font-size: 3rem;
-  }
-  .headercomponentTime {
-    display: inline-flex;
-    flex-direction: row;
-    margin: 1em 3em 0 0;
-    padding: 0;
-    color: #42b883;
-    width: 270px;
-    justify-content: center;
-    font-size: 3rem;
-    font-family: 'Consolas', monospace;
-  }
-  .introOverlay {
-    position: fixed;
-    /*max-width: 0%;*/
-    max-width: 55%;
-    /*top: 20%;*/
-    max-height: 60%;
-    overflow-y: auto;
-    border: 5px solid white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    font-size: 4rem;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .introContent {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 1em;
-    padding: 10px;
-    max-width: 100%;
-  }
-  .okayButton {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #42b883;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 3rem;
-    width: 200px;
-  }
-  .searchInput{
-    /*display: flex;*/
-    display: inherit;
-    position: relative;
-    width: 400px;
-    height: 80px;
-    background-color: white; 
-    color:black;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-  }
-  .dropdown {
-    position: fixed;
-    color: black;
-    border: 1px solid black;
-    background-color: white;
-    text-align: left;
-    max-height: 400px;
-    overflow-y: scroll;
-    z-index: 1000;
-    font-size: 3rem;
-  }
-  .searchsubmitbutton{
-    /* display: flex;*/
-    display: inline-flex;
-    flex-direction: row;  /*  */
-    padding: 3rem;
-    color: black;
-    background-color: #42b883;
-    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-    justify-content: center;
-    font-size: 3rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .description {
-    display: flex;
-    position: absolute;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    z-index: 2;
-    margin-bottom: 2rem;
-    top: 20%;
-  }
-  .description p{
-    font-size: 3.5rem;
-    text-align: left;
-  }
-  .buttonsReset{
-    display: flex;
-    /*flex-wrap: wrap;*/
-    position: absolute;  /*  */
-    gap: 4rem;
-    top: 35%;
-  }
-  .buttonsReset button{
-    color: black;
-    background-color: white;
-    height: 150px;
-    box-sizing: border-box;
-    width: 250px;
-    border-radius: 25px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.5rem;
-  }
-  .grid {
-    display: grid;
-    flex-wrap: wrap;   /*   */ 
-    position: absolute;       
-    grid-template-columns: repeat(3, minmax(30%, auto));
-    gap: 3rem;
-    max-width: 100%;
-    width: var(--max-width);
-    margin-top: 1rem;
-    min-height: 300px; 
-    margin-bottom: 2rem; 
-    overflow-y: auto;
-    top: 45%;  
-    justify-content: center;
-  }
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1.2rem;
-    margin: 2rem;
-    border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
-    flex: 1 1 calc(33.333% - 1rem); 
-    height: 300px;
-    width: 750px;
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      width: 90vw;
+      height: 450px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 2rem 1rem 0 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 200px;
+      box-sizing: border-box;
+      width: 300px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: xx-large;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: 3rem; 
+      width: 100vw;
+      padding: 2rem 0 0 0;
+    }
+    
+    .nextMetroPContainer {
+      margin: 2rem 0 0 0;
+      display: flex;
+      justify-content: center;
+      font-size: 3rem; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 3.5rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 4rem 0 4rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      width: 100%;
+      z-index: 2;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 7rem 1rem 7rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+    .imagecontainer{
+      width: 60px;
+      height: auto;
+    }
   }
 
-  .card h2 {
-    /*font-weight: 600;*/
-    font-size: 4rem;
-    margin: 0.7rem;
-  }
+  @media (min-width: 2601px) {
+    .headercomponents, .headercomponentDate{
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 3em 0 0;
+      padding: 1em;
+      color: #42b883;
+      font-size: 3rem;
+    }
+    .headercomponentTime {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 1em 3em 0 0;
+      padding: 0;
+      color: #42b883;
+      width: 270px;
+      justify-content: center;
+      font-size: 3rem;
+      font-family: 'Consolas', monospace;
+    }
+    .introOverlay {
+      position: fixed;
+      /*max-width: 0%;*/
+      max-width: 55%;
+      /*top: 20%;*/
+      max-height: 60%;
+      overflow-y: auto;
+      border: 5px solid white;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+      font-size: 4rem;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+    }
+    .introContent {
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1em;
+      padding: 10px;
+      max-width: 100%;
+    }
+    .okayButton {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #42b883;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 3rem;
+      width: 200px;
+    }
+    .searchInput{
+      /*display: flex;*/
+      display: inherit;
+      position: relative;
+      width: 400px;
+      height: 80px;
+      background-color: white; 
+      color:black;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+    }
+    .dropdown {
+      position: fixed;
+      color: black;
+      border: 1px solid black;
+      background-color: white;
+      text-align: left;
+      max-height: 400px;
+      overflow-y: scroll;
+      z-index: 1000;
+      font-size: 3rem;
+    }
+    .searchsubmitbutton{
+      /* display: flex;*/
+      display: inline-flex;
+      flex-direction: row;  /*  */
+      padding: 3rem;
+      color: black;
+      background-color: #42b883;
+      border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+      justify-content: center;
+      font-size: 3rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .description {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      z-index: 2;
+      margin-bottom: 2rem;
+      top: 20%;
+    }
+    .description p{
+      font-size: 3.5rem;
+      text-align: left;
+    }
+    .buttonsReset{
+      display: flex;
+      /*flex-wrap: wrap;*/
+      position: absolute;  /*  */
+      gap: 4rem;
+      top: 35%;
+    }
+    .buttonsReset button{
+      color: black;
+      background-color: white;
+      height: 150px;
+      box-sizing: border-box;
+      width: 250px;
+      border-radius: 25px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.5rem;
+    }
+    .grid {
+      display: grid;
+      flex-wrap: wrap;   /*   */ 
+      position: absolute;       
+      grid-template-columns: repeat(3, minmax(30%, auto));
+      gap: 3rem;
+      max-width: 100%;
+      width: var(--max-width);
+      margin-top: 1rem;
+      min-height: 300px; 
+      margin-bottom: 2rem; 
+      overflow-y: auto;
+      top: 45%;  
+      justify-content: center;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      margin: 2rem;
+      border-radius: var(--border-radius);
+      background: rgba(var(--card-rgb), 0);
+      border: 1px solid rgba(var(--card-border-rgb), 0);
+      transition: background 200ms, border 200ms;
+      flex: 1 1 calc(33.333% - 1rem); 
+      height: 300px;
+      width: 750px;
+    }
 
-  .purpleline{
-    background-color: blueviolet;
+    .card h2 {
+      /*font-weight: 600;*/
+      font-size: 4rem;
+      margin: 0.7rem;
+    }
+
+    .purpleline{
+      background-color: blueviolet;
+    }
+    .purpleButton{
+      background-color: blueviolet!important;
+      color: white!important;
+    } 
+    .blueline{
+      background-color: rgba(0, 0,255, 0.6);
+    }
+    .blueButton{
+      background-color: rgba(0, 0,255, 0.6)!important;
+      color: white!important;
+    }  
+    .yellowline{
+      background-color: rgba(255,255,0, 0.6);
+    }
+    .yellowButton{
+      background-color: rgba(255,255,0, 0.6)!important;
+      color: white!important;
+    } 
+    .orangeline{
+      background-color: orangered;
+    }
+    .orangeButton{
+      background-color: orangered!important;
+      color: white!important;
+    } 
+    .greenline{
+      background-color: green;
+    }
+    .greenButton{
+      background-color: green!important;
+      color: white!important;
+    } 
+    .pinkline{
+      background-color: rgba(228, 15, 104, 0.8);
+    }
+    .pinkButton{
+      background-color: rgba(228, 15, 104, 0.8)!important;
+      color: white!important;
+    } 
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem;
+      width: 90vw;
+      height: 700px; 
+      overflow-y: auto;
+      justify-content: center;
+      margin: 2rem 1rem 0 1rem; 
+    }
+    .buttonsContainer button {
+      color: black;
+      background-color: white;
+      padding: 1rem;
+      height: 350px;
+      box-sizing: border-box;
+      width: 450px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: 3rem;
+    } 
+    .nextMetro {
+      display: flex;
+      align-items: center;
+      height: 50%; 
+      font-size: 5rem; 
+      width: 100vw;
+      padding: 4rem 0 0 0;
+    }
+    
+    .nextMetroPContainer {
+      margin: 4rem 0 0 0;
+      display: flex;
+      justify-content: center;
+      font-size: 5rem; 
+    }
+    
+    .nextMetroPContainer p{
+      padding: 3.5rem;
+    }
+    
+    .nextMetro p {
+      margin: 2rem 4rem 0 4rem;         
+      text-align: center;     
+    }
+    
+    .footer{
+      /*display: flex;*/
+      display: inherit;
+      justify-content:center ;
+      position: fixed;
+      bottom: 0;         
+      width: 100%;
+      z-index: 2;
+      padding-bottom: 3rem;
+    }
+    .footercomponents {
+      /*display: flex;*/
+      display: inline-flex; 
+      flex-direction: row;
+      margin: 0 10rem 1rem 10rem;  /* margin: 0 3.5rem;*/
+      padding: 1rem;
+    }
+    .imagecontainer{
+      width: 80px;
+      height: auto;
+    }
   }
-  .purpleButton{
-    background-color: blueviolet!important;
-    color: white!important;
-  } 
-  .blueline{
-    background-color: rgba(0, 0,255, 0.6);
-  }
-  .blueButton{
-    background-color: rgba(0, 0,255, 0.6)!important;
-    color: white!important;
-  }  
-  .yellowline{
-    background-color: rgba(255,255,0, 0.6);
-  }
-  .yellowButton{
-    background-color: rgba(255,255,0, 0.6)!important;
-    color: white!important;
-  } 
-  .orangeline{
-    background-color: orangered;
-  }
-  .orangeButton{
-    background-color: orangered!important;
-    color: white!important;
-  } 
-  .greenline{
-    background-color: green;
-  }
-  .greenButton{
-    background-color: green!important;
-    color: white!important;
-  } 
-  .pinkline{
-    background-color: rgba(228, 15, 104, 0.8);
-  }
-  .pinkButton{
-    background-color: rgba(228, 15, 104, 0.8)!important;
-    color: white!important;
-  } 
-  .buttonsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    width: 90vw;
-    height: 700px; 
-    overflow-y: auto;
-    justify-content: center;
-    margin: 2rem 1rem 0 1rem; 
-  }
-  .buttonsContainer button {
-    color: black;
-    background-color: white;
-    padding: 1rem;
-    height: 350px;
-    box-sizing: border-box;
-    width: 450px;
-    border-radius: 25px;
-    text-align: center;
-    font-size: 3rem;
-  } 
-  .nextMetro {
-    display: flex;
-    align-items: center;
-    height: 50%; 
-    font-size: 5rem; 
-    width: 100vw;
-    padding: 4rem 0 0 0;
-  }
-  
-  .nextMetroPContainer {
-    margin: 4rem 0 0 0;
-    display: flex;
-    justify-content: center;
-    font-size: 5rem; 
-  }
-  
-  .nextMetroPContainer p{
-    padding: 3.5rem;
-  }
-  
-  .nextMetro p {
-    margin: 2rem 4rem 0 4rem;         
-    text-align: center;     
-  }
-  
-  .footer{
-    /*display: flex;*/
-    display: inherit;
-    justify-content:center ;
-    position: fixed;
-    bottom: 0;         
-    width: 100%;
-    z-index: 2;
-    padding-bottom: 3rem;
-  }
-  .footercomponents {
-    /*display: flex;*/
-    display: inline-flex; 
-    flex-direction: row;
-    margin: 0 10rem 1rem 10rem;  /* margin: 0 3.5rem;*/
-    padding: 1rem;
-  }
-  .imagecontainer{
-    width: 80px;
-    height: auto;
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
